@@ -12,5 +12,10 @@ class Model:
         inputs = np.array([[0,0],[0,1],[1,0],[1,1]])
         expected_output = np.array([0,0,0,1])
         self.model.fit(inputs, expected_output)
+
     def test(self):
         print(self.model.predict([[0,1],[0,0],[1,0],[1,1]]))
+
+    def predict(self, n):
+        result = self.model.predict([[0,1],n,[1,0],[1,1]])
+        return result[1]
