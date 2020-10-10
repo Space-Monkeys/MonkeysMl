@@ -11,3 +11,6 @@ def teste():
     model.train()
     n  = model.predict(logicals)
     return  jsonify({ 'data' : str(n) })
+@sp_monkey.route('/test', methods=['GET'])
+def page():
+    return jsonify({ 'data' : 'isso é um teste'})
